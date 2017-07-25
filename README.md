@@ -6,6 +6,7 @@ $ cat /etc/nginx/conf.d/printer.conf
 server {
     ...
     location /printers {
+        add_header Content-Type text/plain;
         proxy_pass http://127.0.0.1:9991;
     }
 }
