@@ -1,2 +1,2 @@
 #!/bin/bash
-while :; do echo -e "HTTP/1.1 200 OK\n\n$(shuf -n1 facts)" | nc -l -p 9991; done
+while :; do echo -e "HTTP/1.0 200 OK\n\n$(shuf -n1 facts)" | nc -N -l -p 9991; done
